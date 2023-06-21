@@ -1,0 +1,35 @@
+{
+  "name": "alexa-youtube-skill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -b",
+    "generate": "plop --plopfile ./templates/plopfile.js",
+    "format": "prettier --write \"lambda/**/*.ts\"",
+    "lint": "eslint \"lambda/**/*.ts\" --fix",
+    "publish": "npm run clean && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.14.0",
+    "dotenv": "^16.3.1",
+    "googleapis": "^118.0.0",
+    "ytdl-core": "^4.11.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "plop": "^3.1.2",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3"
+  }
+}

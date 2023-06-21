@@ -1,0 +1,11 @@
+import { RequestHandler } from 'ask-sdk-core';
+import { isIntentRequestHandler } from '../helpers/intent.helper';
+
+export const PlayIntent: RequestHandler = {
+  canHandle(handlerInput) {
+    return isIntentRequestHandler(handlerInput, 'PlayIntent');
+  },
+  handle(handlerInput) {
+    return handlerInput.responseBuilder.getResponse();
+  },
+};
